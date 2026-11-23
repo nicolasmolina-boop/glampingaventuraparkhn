@@ -27,3 +27,25 @@ input,select,textarea{min-width:0;max-width:100%}
 .hero h1{font-size:clamp(3.2rem,5.4vw,5.8rem)}
 @media(min-width:761px) and (max-width:1100px){.site-header{padding:0 4vw}.site-header nav{gap:1rem}.site-header nav a{white-space:nowrap;font-size:.82rem}.nav-cta{padding:.5rem .7rem}.brand-logo img{height:2.6rem}.hero h1{font-size:clamp(2.8rem,6.2vw,4.4rem)}}
 @media(min-width:1700px){.section,.site-header,footer{padding-left:max(7.8vw,8rem);padding-right:max(7.8vw,8rem)}.hero-copy{padding-left:max(5.2vw,8rem)}}
+
+/* La carta: precios como menú impreso (tomado de la propuesta v3) */
+.carta{background:#edf0e9}
+.carta-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:4rem 5vw;align-items:start}
+.carta-head{position:sticky;top:2rem}
+.carta-head h2{margin-top:1.5rem}
+.carta-lead{margin-top:1.4rem;color:var(--muted)}
+.carta-disc{margin-top:1.6rem;font-size:.86rem;line-height:1.6;color:var(--muted);max-width:34rem}
+.carta-card{background:#fff;border:1px solid var(--line);padding:3rem 3rem;box-shadow:0 1px 0 #fff inset,0 18px 40px -28px rgba(23,62,53,.35)}
+.carta-plan+.carta-plan{margin-top:3.2rem;padding-top:3.2rem;border-top:1px solid var(--line)}
+.carta-plan h3{font-size:clamp(1.8rem,2.6vw,2.4rem);line-height:1.1}
+.carta-kicker{margin-top:.4rem;color:var(--muted);font-size:.92rem}
+.carta-lines{margin:1.6rem 0 0;padding:0;border-top:1.5px solid var(--ink)}
+.carta-line{display:flex;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.carta-line dt{display:flex;align-items:baseline;flex:1 1 auto;min-width:0;gap:.6rem}
+.carta-line dt small{flex:none;order:2;color:var(--muted);font-size:.82rem}
+.carta-line dt::after{content:"";flex:1 1 1rem;order:3;min-width:1rem;align-self:end;margin-bottom:.35rem;border-bottom:1px dotted var(--muted)}
+.carta-line dd{margin:0;flex:none;font-family:var(--serif);font-size:1.45rem;color:var(--pine)}
+.carta-incl{margin-top:1.4rem;color:var(--muted);max-width:60ch}
+.carta-plan>.button{margin-top:1.4rem}
+.carta-plan>.carta-incl+.carta-lines{margin-top:1.1rem}
+@media(max-width:960px){.carta-grid{grid-template-columns:minmax(0,1fr)}.carta-head{position:static}.carta-card{padding:2rem 1.3rem}.carta-line dt{flex-wrap:wrap;row-gap:0}.carta-line dt::after{display:none}}
